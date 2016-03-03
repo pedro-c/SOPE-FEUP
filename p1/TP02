@@ -1,0 +1,25 @@
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+
+int main(void) {
+	int fd, sync_err;
+	char *text1="AAAAAAAAAA";
+	char *text2="BBBBBBBBBB";
+	 fd=open("f1.txt",O_CREAT|O_WRONLY|O_APPEND|O_TRUNC|O_SYNC,0600);
+	 // sem O_TRUNC, em cada execucao vai acrescentando ao conteudo ja'
+	existente
+	 write(fd,text1,10);
+	//sync_err=fsync(fd);
+	//if (sync_err == -1) {printf("sync_err\n"); return 1;}
+	//sleep(10);
+	 getchar();
+	 write(fd,text2,10);
+	//sync_err=fsync(fd);
+	//if (sync_err == -1) {printf("sync_err\n"); return 1;}
+	//sleep(2);
+ 	close(fd);
+	return 0;
+} 
