@@ -1,11 +1,3 @@
-
-
-struct Person{
-    char name[20];
-    int score;
-  
-};
-
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
