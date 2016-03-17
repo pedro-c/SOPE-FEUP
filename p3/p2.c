@@ -23,7 +23,7 @@ int main(void) {
 #include <unistd.h>
 #include <sys/types.h>
 int main(void) {
-    printf("1\n");
+    printf("1");
     if(fork() > 0) {
         printf("2\n");
         printf("3\n");
